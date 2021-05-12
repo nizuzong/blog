@@ -5,7 +5,7 @@
  # @,@Author: ,: 李凯
  # @,@Date: ,: 2021-05-12 20:14:30
  # @,@LastEditors: ,: 李凯
- # @,@LastEditTime: ,: 2021-05-12 20:15:08
+ # @,@LastEditTime: ,: 2021-05-12 20:32:51
  ###
 #!/usr/bin/env sh
 
@@ -16,7 +16,7 @@ set -e
 npm run build
 
 # 进入生成的文件夹
-cd docs/.vuepress/dist
+cd public
 
 # 如果是发布到自定义域名
 # echo 'www.yourwebsite.com' > CNAME
@@ -26,7 +26,7 @@ git add -A
 git commit -m 'deploy'
 
 # 如果你想要部署到 https://USERNAME.github.io
-git push -f https://github.com/nizuzong/nizuzong.github.io.git master
+git push -f git@github.com:nizuzong/nizuzong.github.io.git master
 
 # 如果发布到 https://USERNAME.github.io/<REPO>  REPO=github上的项目
 # git push -f git@github.com:USERNAME/<REPO>.git master:gh-pages
