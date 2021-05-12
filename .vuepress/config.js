@@ -5,7 +5,7 @@
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
  * @,@LastEditors: ,: 李凯
- * @,@LastEditTime: ,: 2021-05-12 20:03:31
+ * @,@LastEditTime: ,: 2021-05-12 21:51:50
  */
 module.exports = {
   "title": "林深的博客",
@@ -53,11 +53,11 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/docs/theme-reco/": [
+      "/docs/informal/": [
         "",
-        "theme",
-        "plugin",
-        "api"
+        "reactSwiper",
+        "htmlCss",
+        "vscodeSetting"
       ]
     },
     "type": "blog",
@@ -79,10 +79,10 @@ module.exports = {
         "link": "https://www.recoluan.com"
       },
       {
-        "title": "vuepress-theme-reco",
+        "title": "vuepress-informal",
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
-        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
+        "avatar": "https://vuepress-informal.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://vuepress-informal.recoluan.com"
       }
     ],
     "logo": "/logo.png",
