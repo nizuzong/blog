@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
+heroText: 林深的个人博客
+tagline: 记录积累的技术栈和常见的问题
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
