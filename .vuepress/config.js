@@ -58,6 +58,11 @@ module.exports = {
         "reactSwiper",
         "htmlCss",
         "vscodeSetting"
+      ],
+      "/docs/algorithm/": [
+        "",
+        "timeComplexity",
+        "spatialComplexity"
       ]
     },
     "type": "blog",
