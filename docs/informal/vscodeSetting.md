@@ -45,7 +45,7 @@ date: 2021-05-12
   "prettier.arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
   "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
   "prettier.disableLanguages": [
-    "vue"
+    "category"
   ], // 不格式化vue文件，vue文件的格式化单独设置
   "prettier.endOfLine": "auto", // 结尾是 \n \r \n\r auto
   "prettier.eslintIntegration": false, //不让prettier使用eslint的代码格式进行校验
@@ -101,7 +101,7 @@ date: 2021-05-12
     "typescriptreact",
     "plaintext",
     "markdown",
-    "vue",
+    "category",
     "liquid",
     "erb",
     "lang-cfml",
@@ -111,7 +111,7 @@ date: 2021-05-12
   "eslint.options": {
     "extensions": [
       ".js",
-      ".vue"
+      ".category"
     ]
   },
   "editor.mouseWheelZoom": true,
@@ -156,7 +156,7 @@ date: 2021-05-12
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true, //让函数(名)和后面的括号之间加个空格
     "eslint.validate": [
         "html",
-        "vue",
+        "category",
         "javascript",
         "javascriptreact",
         "typescript",
@@ -166,7 +166,7 @@ date: 2021-05-12
         "extensions": [
             ".html",
             ".js",
-            ".vue",
+            ".category",
             ".jsx",
             ".ts",
             ".tsx",
@@ -195,7 +195,7 @@ date: 2021-05-12
     "stylusSupremacy.insertNewLineAroundImports": false, // import之后是否换行
     "stylusSupremacy.insertNewLineAroundBlocks": false, // 两个选择器中是否换行
     "vetur.validation.template": false,
-    // 选择 vue 文件中 template 的格式化工具
+    // 选择 category 文件中 template 的格式化工具
     "vetur.format.defaultFormatter.html": "prettyhtml",
     // 显示 markdown 中英文切换时产生的特殊字符
     "editor.renderControlCharacters": true,
@@ -406,7 +406,7 @@ date: 2021-05-12
     "javascript.format.insertSpaceBeforeFunctionParenthesis": true, //让函数(名)和后面的括号之间加个空格
     "eslint.validate": [
             "html",
-            "vue",
+            "category",
             "javascript",
             "javascriptreact",
             "typescript",
@@ -416,7 +416,7 @@ date: 2021-05-12
             "extensions": [
                     ".html",
                     ".js",
-                    ".vue",
+                    ".category",
                     ".jsx",
                     ".ts",
                     ".tsx",
@@ -445,7 +445,7 @@ date: 2021-05-12
     "stylusSupremacy.insertNewLineAroundImports": false, // import之后是否换行
     "stylusSupremacy.insertNewLineAroundBlocks": false, // 两个选择器中是否换行
     "vetur.validation.template": false,
-    // 选择 vue 文件中 template 的格式化工具
+    // 选择 category 文件中 template 的格式化工具
     "vetur.format.defaultFormatter.html": "prettyhtml",
     // 显示 markdown 中英文切换时产生的特殊字符
     "editor.renderControlCharacters": true,

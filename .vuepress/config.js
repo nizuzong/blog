@@ -4,8 +4,8 @@
  * @,@Company: ,: 快乐青年
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
- * @,@LastEditors: ,: 李凯
- * @,@LastEditTime: ,: 2021-05-12 21:51:50
+ * @,@LastEditors: ,: Please set LastEditors
+ * @,@LastEditTime: ,: 2021-05-15 22:53:02
  */
 module.exports = {
   "title": "林深的博客",
@@ -46,7 +46,7 @@ module.exports = {
         "items": [
           {
             "text": "GitHub",
-            "link": "https://github.com/recoluan",
+            "link": "https://github.com/",
             "icon": "reco-github"
           }
         ]
@@ -73,16 +73,23 @@ module.exports = {
     },
     "friendLink": [
       {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
+        "title": "林深",
+        "email": "13718327716@163.com",
       },
       {
-        "title": "vuepress-informal",
-        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+        "title": "掘金",
         "avatar": "https://vuepress-informal.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-informal.recoluan.com"
+        "link": "https://juejin.cn/post/6844904119782604807"
+      },
+      {
+        "title": "github",
+        "avatar": "https://vuepress-informal.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://github.com/"
+      },
+      {
+        "title": "码云",
+        "avatar": "https://vuepress-informal.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://gitee.com/yichengliuxu_admin/dashboard/projects"
       }
     ],
     "logo": "/logo.png",
@@ -92,7 +99,7 @@ module.exports = {
     "author": "林深",
     "authorAvatar": "/avatar.png",
     "record": "xxxx",
-    "startYear": "2017"
+    "startYear": "2021"
   },
   "markdown": {
     "lineNumbers": true
