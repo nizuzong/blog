@@ -18,8 +18,8 @@ for (let i = 0; i < n; i += 1) {
 ```
 
 ### O(n) * O(n) = O(n^2)
-// n*n = n^2
 ```javascript
+// n*n = n^2
 for (let i = 0; i < n; i += 1) {
   for (let j = 0; j < n; j += 1) {
     console.log(i, j);
