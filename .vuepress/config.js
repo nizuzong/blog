@@ -5,7 +5,7 @@
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
  * @,@LastEditors: ,: 林深
- * @,@LastEditTime: ,: 2021-05-24 20:08:03
+ * @,@LastEditTime: ,: 2021-05-24 21:51:05
  */
 module.exports = {
   "title": "林深的博客",
@@ -63,7 +63,8 @@ module.exports = {
         "",
         "timeComplexity",
         "spatialComplexity",
-        "stack"
+        "stack",
+        "linkedList"
       ]
     },
     "type": "blog",
