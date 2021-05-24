@@ -4,8 +4,8 @@
  * @,@Company: ,: 快乐青年
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
- * @,@LastEditors: ,: Please set LastEditors
- * @,@LastEditTime: ,: 2021-05-15 22:53:02
+ * @,@LastEditors: ,: 林深
+ * @,@LastEditTime: ,: 2021-05-24 20:08:03
  */
 module.exports = {
   "title": "林深的博客",
@@ -62,7 +62,8 @@ module.exports = {
       "/docs/algorithm/": [
         "",
         "timeComplexity",
-        "spatialComplexity"
+        "spatialComplexity",
+        "stack"
       ]
     },
     "type": "blog",
