@@ -53,6 +53,9 @@ module.exports = {
       }
     ],
     "sidebar": {
+      "/docs/webpack/": [
+        ""
+      ],
       "/docs/informal/": [
         "",
         "reactSwiper",
