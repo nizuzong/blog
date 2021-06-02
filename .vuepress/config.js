@@ -53,6 +53,10 @@ module.exports = {
       }
     ],
     "sidebar": {
+      "/docs/javaScript/": [
+        "",
+        "jsProcess"
+      ],
       "/docs/webpack/": [
         ""
       ],
