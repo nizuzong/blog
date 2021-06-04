@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 林深的个人博客
-tagline: 记录积累的技术栈和常见的问题
+tagline: 不以己跬步，无以至千里
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',

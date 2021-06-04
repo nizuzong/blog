@@ -53,6 +53,9 @@ module.exports = {
       }
     ],
     "sidebar": {
+      "/docs/questions": [
+        ""
+      ],
       "/docs/javaScript/": [
         "",
         "jsProcess"
