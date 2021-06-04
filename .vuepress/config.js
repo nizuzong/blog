@@ -53,8 +53,8 @@ module.exports = {
       }
     ],
     "sidebar": {
-      "/docs/questions": [
-        ""
+      "/docs/questions/": [
+        "",
       ],
       "/docs/javaScript/": [
         "",
