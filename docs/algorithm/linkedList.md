@@ -40,10 +40,12 @@ c.next = d;
 ```
 ### leetCode 237 删除链表中的节点
 ```javascript
+
 var deleteNode = function(node) {
     node.val = node.next.val;
     node.next = node.next.next;
 };
+
 ```
 ### LeetCode 206 反转链表
 #### 思路

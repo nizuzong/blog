@@ -8,8 +8,24 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
+    "@mr-hope/vuepress-plugin-reading-time": "^1.18.2",
     "vuepress": "1.8.2",
-    "vuepress-theme-reco": "1.6.6"
+    "vuepress-plugin-sakura": "^1.1.0",
+    "vuepress-theme-realwds": "^1.1.4",
+    "vuepress-theme-reco": "1.6.6",
+    "vuepress-theme-yuu": "^3.1.1"
   },
-  "description": "林深的博客"
+  "description": "林深的博客",
+  "dependencies": {
+    "@vuepress-reco/vuepress-plugin-kan-ban-niang": "^1.0.5",
+    "@vuepress-yard/vuepress-plugin-window": "^1.0.10",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "vuepress-plugin-cursor-effects": "^1.0.2",
+    "vuepress-plugin-dynamic-title": "^1.0.0",
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-nuggets-style-copy": "^1.0.3",
+    "vuepress-plugin-reading-progress": "^1.0.10",
+    "vuepress-plugin-ribbon": "^1.0.4",
+    "vuepress-plugin-sitemap": "^2.3.1"
+  }
 }
