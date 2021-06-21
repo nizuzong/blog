@@ -2,25 +2,6 @@
 home: true
 heroText: 林深的个人博客
 tagline: 不积跬步，无以至千里
-# heroImage: /hero.jpeg
-# heroImageStyle: {
-#   width: '100%',
-#   margin: 0,
-  # position: 'fixed',
-  # top: 0,
-  # left: 0,
-  # height: '100%',
-  # maxWidth: '2100px',
-  # maxHeight: '2100px'
-# }
-# heroImageStyle: {
-#   # maxWidth: '600px',
-#   width: '100%',
-#   display: block,
-#   # margin: '9rem auto 2rem',
-#   background-image: url('/hero.jpeg'),
-#   borderRadius: '1rem',
-# }
 bgImageStyle: {
   background: "url('/hero.jpeg')",
   z-index: '-1',
@@ -29,7 +10,7 @@ bgImageStyle: {
 }
 isShowTitleInHome: false
 actionText: Guide
-actionLink: /views
+actionLink: /docs/questions
 features:
 - title: JavaScript进阶
   details: 夯实高级开发所需基础，提升编程技能及代码设计能力，学会阅读分析源码，建立健全技术知识体系，平滑过渡高级前端开发工程师。

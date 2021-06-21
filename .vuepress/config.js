@@ -5,8 +5,9 @@
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
  * @,@LastEditors: ,: 林深
- * @,@LastEditTime: ,: 2021-06-21 00:05:38
+ * @,@LastEditTime: ,: 2021-06-21 23:47:05
  */
+const moment = require('moment')
 module.exports = {
   "title": "林深的博客",
   "description": "林深的博客",
@@ -67,7 +68,8 @@ module.exports = {
         "",
         "reactSwiper",
         "htmlCss",
-        "vscodeSetting"
+        "vscodeSetting",
+        "modelConfig"
       ],
       "/docs/algorithm/": [
         "",
@@ -134,7 +136,7 @@ module.exports = {
       {
         description: 'shizuku',
         theme: ['shizuku'], // , 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'blackCat', 'wanko', 'miku', 'z16'
-        clean: true,
+        clean: false,
         messages: {
           welcome: '欢迎来到',
           home: '不积跬步无以至千里',
@@ -143,6 +145,15 @@ module.exports = {
         },
         width: 240,
         height: 352
+      }
+    ],
+    [
+      '@vuepress/last-updated',
+      {
+          transformer: (timestamp, lang) => {
+              moment.locale(lang)
+              return moment(timestamp).format('YYYY-MM-DD HH:mm:ss')
+          }
       }
     ],
     // [
@@ -173,6 +184,14 @@ module.exports = {
         recoverTime: 2000
       }
     ],
+    // 自动生成侧边栏的插件
+    [
+      'vuepress-plugin-auto-sidebar', {
+          collapse: {
+              open: true
+          }
+      }
+  ],
     [
       //图片放大插件 先安装在配置， npm install @vuepress-plugin-medium-zoom --save
       '@vuepress\plugin-medium-zoom', {

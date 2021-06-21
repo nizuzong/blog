@@ -1,6 +1,9 @@
 ---
 title: 使用lerna发布npm
 date: 2021-05-12
+tags: 随笔
+categories: 
+ - 随笔
 ---
 
 # 前言
