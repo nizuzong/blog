@@ -5,7 +5,7 @@
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
  * @,@LastEditors: ,: 林深
- * @,@LastEditTime: ,: 2021-06-21 23:47:05
+ * @,@LastEditTime: ,: 2021-07-04 21:11:32
  */
 const moment = require('moment')
 module.exports = {
@@ -66,6 +66,7 @@ module.exports = {
       ],
       "/docs/informal/": [
         "",
+        "jsMethod",
         "reactSwiper",
         "htmlCss",
         "vscodeSetting",
