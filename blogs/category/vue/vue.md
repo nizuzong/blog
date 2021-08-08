@@ -1,17 +1,10 @@
-<!--
- * @,@Description: ,: 不积跬步，无以至千里
- * @,@version: ,: 0.0.1
- * @,@Company: ,: 
- * @,@Author: ,: 林深
- * @,@Date: ,: 2021-04-08 04:46:52
- * @,@LastEditors: ,: 林深
- * @,@LastEditTime: ,: 2021-06-30 21:45:56
- -->
 ---
-title: vue
-date: 2017-09-21
-tags:
- - vue
+title: vite
+date: 2021-05-12
+tags: vite
+categories: 
+ - vite
+---
 ---
 
 # Vue3
