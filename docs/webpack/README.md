@@ -10,7 +10,7 @@ webpack是一个打包模块的```javaScript```的工具，它会从入口模块
 
 ### 安装webpack
 ### 全局安装（不推荐）
-```javascript
+```shell
 // 安装webpack v4+版本时,需要额外安装webpack-cli
 
 npm install webpack webpack-cli -g
@@ -27,7 +27,7 @@ npm uninstall webpack webpack-cli -g
 依赖不同版本而d导致冲突，构建失败。
 
 #### 推荐安装
-```javascript
+```shell
 // 安装最稳定的版本
 npm  install -D webpack
 
@@ -37,8 +37,9 @@ npm install -D webpack@<version>
 // 安装最新体验版  可能包含bug 不要用于生产环境
 npm install -D webpack@beta
 
-// 安装webpack v4+版本时，需要额外安装webpack-cli
+// 安装webpack v4+版本时,需要额外安装webpack-cli
 npm install -D webpack-cli
+
 ```
 #### 检查安装
 ```javascript
