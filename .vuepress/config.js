@@ -4,8 +4,8 @@
  * @,@Company: ,: 快乐青年
  * @,@Author: ,: 李凯
  * @,@Date: ,: 2021-04-08 04:46:52
- * @,@LastEditors: ,: 林深
- * @,@LastEditTime: ,: 2021-07-12 23:04:10
+ * @LastEditors: 林深
+ * @LastEditTime: 2021-08-23 20:39:04
  */
 const moment = require('moment')
 module.exports = {
@@ -72,6 +72,10 @@ module.exports = {
         "htmlCss",
         "vscodeSetting",
         "modelConfig"
+      ],
+      "/docs/flutter/": [
+        "",
+        "basics"
       ],
       "/docs/algorithm/": [
         "",

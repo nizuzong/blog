@@ -3,7 +3,7 @@ title: JavaScript篇
 date: 2021-05-15
 tags:
  - 面试
-categories: 
+categories:
  - 面试
 ---
 ## 1、箭头函数和普通函数的区别
@@ -16,7 +16,7 @@ categories:
 
 ## 2、let、const、var这三者的区别
 
-__变量提升:__ 
+__变量提升:__
 + ```var```声明的变量存在变量提升（变量可以在声明前调用，值为```undefined```）
 + ```let```和```const```不存在变量提升问题（因为let和const都有一个暂时性死区的概念，所以在没有得到赋值前是不能被调用的）
 __块级作用域：__ ```var```不存在块级作用域，```let```和```const```存在块级作用域
@@ -133,3 +133,141 @@ fetch是什么： fetch被称为下一代的```ajax```技术，采用promise方�
 5. TypeScript为函数提供了缺省参数值
 6. TypeScript引入了JavaScript中没有的```类```概念
 6. TypeScript中引入了模块的概念，可以吧声明、数据、函数和类封装在模块中
+
+# 数据类型
+## 1、JavaScript有哪些数据类型，它们的区别
+```javascript```共有七中基本数据类型，分别是```undefined、null、boolean、number、string```,还有es6中新增的```Symbol```和```BigInt```类型：
++ Symbol代表创建后独一无二且不可变的数据类型，它的出现我任务主要是为了解决可能出现的全局变量冲突的问题。
++ BigInt是一种数字类型的数据，它可以表示任意精度格式的整数，使用```BigInt```可以安全地存储和操作大整数，即使这个树已经超出了```Number```能够表示的安全整数范围。
+
+__这些数据可以分为```原始数据类型```和```引用数据类型```__
++ 栈：原始数据类型（undefined、null、boolean、number、string）
++ 堆：引用数据类型（object、array、function）
+
+__区别__
++ 存储位置不同
+
+1. 原始数据类型直接存储在```栈```中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储。
+2. 引用数据类型存储在```堆```中的对象，占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后村堆中获得实体。
+
+__堆和栈的概念存在于数据结构中和操作系统内存中：__
++ 在数据结构中，栈中数据的存取方式为先进后出
++ 堆是一个优先队列，是按优先级来进行排序的，优先级可以按照大小来规定。完全二叉树是堆的一种实现方式
+
+在操作系统中，内存被分为栈区和堆区：
+1. 栈区内存由编译器自动分配存放，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈
+2. 堆区内存以便由程序员分配释放，若程序员不释放，程序结束时可能由垃圾回收机制回收
+
+## 2、数据类型检测的方式有哪些
+__1、typeof__
+```js
+console.log(typeof 2);               // number
+console.log(typeof true);            // boolean
+console.log(typeof 'str');           // string
+console.log(typeof []);              // object
+console.log(typeof function(){});    // function
+console.log(typeof {});              // object
+console.log(typeof undefined);       // undefined
+console.log(typeof null);            // object
+```
+其中数组、对象、null都会被判断为```object```，其他判断都正确
+
+__2、instanceof__
+```instanceof```可以正确判断对象的类型，因为其内部的机制是通过判断在其原型链中能否找到该类型的原型。
+```js
+console.log(2 instanceof Number);                    // false
+console.log(true instanceof Boolean);                // false
+console.log('str' instanceof String);                // false
+console.log([] instanceof Array);                    // true
+console.log(function(){} instanceof Function);       // true
+console.log({} instanceof Object);                   // true
+```
+instanceof只能正确判断引用数据类型，而不能判断基本数据类型
+
+```instanceof```运算符用来测试一个对象在其原型链中是否存在一个构造函数的```prototype```属性
+
+__3、constructor__
+```js
+console.log((2).constructor === Number); // true
+console.log((true).constructor === Boolean); // true
+console.log(('str').constructor === String); // true
+console.log(([]).constructor === Array); // true
+console.log((function() {}).constructor === Function); // true
+console.log(({}).constructor === Object); // true
+```
+```constructor```有两个作用，一是判断数据的类型，二是对象实例通过```constructor```对象访问它的构造函数
+
+__注意__
+如果创建一个对象来改变它的原型，constructor就不能用来判断数据类型了
+```js
+function Fn(){};
+Fn.prototype = new Array();
+var f = new Fn();
+console.log(f.constructor===Fn);    // false
+console.log(f.constructor===Array); // true
+```
+__4、Object.prototype.toString.call()__
+```Object.prototype.toString.call()```使用```Object```对象的原型方法```toString```，判断数据类型
+```js
+var a = Object.prototype.toString;
+console.log(a.call(2));
+console.log(a.call(true));
+console.log(a.call('str'));
+console.log(a.call([]));
+console.log(a.call(function(){}));
+console.log(a.call({}));
+console.log(a.call(undefined));
+console.log(a.call(null));
+```
+同样是检测对象```obj```调用```toString```方法，```obj.toString```的结果和```Object.prototype.toString.call()```的结果不一样，这是为什么？
+
+这是因为```toString```为```Object```的原型方法，而```Array、function```等类型作为```Object```实例，都重写了```toString```方法，不同的对象类型调用```toString```方法时，根据原型链的只是，调用的是对应的重写之后的```toString```方法（```function```类型返回内容为函数体的字符串，```Array```类型返回元素组成的字符串...），而不会去调用```Object```上原型```toString```方法（返回对象的具体类型），所以采用```obj.toString```不能得到其对象类型，只能将```obj```转换为字符串类型；因此，在想要得到对象的具体类型时，应该调用```Object```上原型```toString```方法。
+
+## 3、判断数据的方式有哪些
++ 通过Object.prototype.toString.call()做判断
+```js
+Object.prototype.toString.call().slice(8,-1) === 'Array';
+```
++ 通过原型链来判断
+```js
+obj.__proto__ === Array.prototype;
+```
++ 通过es6```Array.isArray()```做判断
+```js
+Array.isArray(obj);
+```
++ 通过```instanceof```做判断
+```js
+obj instanceof Array
+```
++ 通过```Array.prototype.isPrototypeOf```
+```js
+Array.prototype.isPrototypeOf(obj);
+```
+
+## 4、null和undefined区别
+首先```undefined```和```null```都是基本数据类型，这两个基本数据类型分别只有一个值，就是```undefined```和```null```。
+
+```undefined```代表的含义是未定义，```null```代表的含义是空对象。一般变量声明了但还没有定义的时候会返回```undefined```，```null```主要用于赋值给一写可能会返回对象的变量，作为初始化。
+
+```undefined```在js中不是一个保留字，这意味着可以使用```undefined```来作为一个变量名，这样的做法是非常危险的，它会影响对```undefined```值得判断。但是可以通过一个方法获得安全的```undefined```值，比如说```void 0```。
+
+当对两种类型使用```typeof```进行判断的时候，```null```类型化会返回```object```，这是一个历史遗留的问题。当使用双等号对两种类型的值进行比较时会返回```true```，使用三个等号时会返回```false```
+
+## 5、instanceof操作符的实现原理及实现
+
+```instanceof```运算符用于判断构造函数的```prototype```属性是否出现在对象的原型链中的任何尾椎。
+```js
+function myInstanceOf(left, right) {
+  // 获取对象的原型
+  let proto = Object.getPrototypeOf(left);
+  // 获取构造函数的prototype对象
+  prototype = right.prototype;
+  // 判断构造函数的prototype对象是否在对象的原型链上
+  while(true) {
+    if (!proto) return false;
+    if (proto === prototype) return false;
+    proto = Object.getPrototypeOf(proto);
+  };
+};
+```
